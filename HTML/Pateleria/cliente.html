@@ -1,0 +1,477 @@
+<html>
+    <!--- Pagina con el formulario para que el cliente ordene sus pasteles-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ordenar - Pankini</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <!--- Estilos para el formulario -->
+        <style>
+            title {
+            font-size: 30px;
+            }
+            h1{
+            color: rgb(7, 7, 7);
+            text-align: center;
+            font-size: 45px;
+            font-family: 'Lobster', cursive;
+            margin-top: 15px;
+            font-weight: bold;
+            }
+            h2{
+                color: rgb(7, 7, 7);
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Lobster', cursive;
+                margin-top: 5px;
+            }
+            h3{
+                color: rgb(7, 7, 7);
+                text-align: center;
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                margin-top: 1px;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }   
+            .container{
+                padding: 1px;
+            }
+            nav{
+                background-color: #f2f2f200;
+                padding: 1.5px;
+                text-align: center;
+            }
+            li{
+                display: ruby-text;
+                margin: 62px;
+                font-size: 36px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            body{
+                background-color: #ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .row{
+                margin-top: 20px;
+            }
+            .col-md-4{
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            footer{
+                background-color: #fafafa;
+                padding: 20px;
+                text-align: center;
+            }
+            image{
+                width: 100%;
+                height: auto;
+                opacity: calc(0.1 - 0.1 * (100vw - 320px) / (960 - 320));
+            }
+            p{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(7, 7, 7);
+                text-align: center;
+                text-decoration: dotted;
+            }
+            div {
+                margin: 0;
+                padding: 0;
+
+            }
+            footer{
+                background-color: #fad8d8;
+                padding: 20px;
+                text-align: center;
+            }
+            header{
+                background-color: #e9d8d8;
+                padding: 5px;
+                text-align: center;
+            }
+            a {
+                color: #000000;
+                text-decoration: none;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 27px;
+            }
+            footer{
+                    background-color: #fad8d8;
+                    padding: 20px;
+                    text-align: center;
+                    margin: 0px;
+            }
+            p{
+                font-size: 19px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(7, 7, 7);
+                text-align: center;
+            }
+            h1{
+                color: rgb(7, 7, 7);
+                text-align: center;
+                font-size: 45px;
+                font-family: 'Lobster', cursive;
+                margin-top: 15px;
+                font-weight: bold;
+            }
+            h2{
+                color: rgb(7, 7, 7);
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Lobster', cursive;
+                margin-top: 5px;
+            }
+            h3{
+                color: rgb(7, 7, 7);
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Lobster', cursive, bold;
+                margin-top: 1px;
+            }
+            h5{
+                color: rgb(208, 83, 212);
+                text-align: center;
+                font-size: 22px;
+                font-family: 'Lobster', cursive;
+                margin-top: 1px;
+            }
+            * {
+                margin: 0px;
+                padding: 0;
+            } 
+            body{
+                background-color: #e9d8d8;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            nav{
+                background-color: #f2f2f200;
+                padding: 1.5px;
+                text-align: center;
+            }
+            li{
+                display: ruby-text;
+                margin: 62px;
+                font-size: 36px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(253, 152, 152);
+            }
+            .form-group{
+                margin-top: 10px;
+            }
+            .form-group label{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            .form-group input{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            .form-group select{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            .form-group textarea{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            .form-group button{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            .form-group button:hover{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            header{
+                background-image: url(images/backNav.png) ;
+                padding: 0px;
+                text-align: center;
+                margin: 0px;
+            }
+            section{
+                padding: 1.5px;
+                margin: 15px;
+            }
+            image{
+                width: 100%;
+                height: 100%;
+            }
+            li{
+                display: ruby-text;
+                margin: 62px;
+                font-size: 36px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+            .row{
+                margin-top: 20px;
+            }
+            label{
+                font-size: 20px;
+                font-family: 'Lobster', cursive;
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+        </style>
+    </head>
+    <!--- Body -->
+        <body>
+            <header>
+                <!--Navegacion-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Hacemos pasteles con amor</h1>
+                        <div class="col-md-12">
+                            <nav>
+                                <ul>
+                                    <img src="images/logo pankini.png" alt="logo" width="150px" height="150px" >
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li><a href="cliente.html">Ordenar</a></li>
+                                    <li><a href="pastelero.html">Soy pastelero</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </header>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Pankini</h1>
+                            <div style="text-align: center;"><img src="images/inicio.jpg" alt="inicio" width="850px" height="563px" ><img src="images/inicio1.jpg" alt="menu" width="1000px" height="563px" ></div>
+                            <h2>Ordenar</h2>
+                            <h3>Por favor, rellene el siguiente formulario para ordenar sus pasteles...</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form action="ordenar.php" method="post">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidos">Apellidos</label>
+                                    <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion">Dirección</label>
+                                    <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
+                                </div>
+                                <div>
+                                    <label for="fecha">Fecha</label>
+                                    <input class="form-control" type="date" name="fecha" id="fecha" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hora">Hora</label>
+                                    <input class="form-control" type="time" name="hora" id="hora" required>
+                                </div>
+                                <div>
+                                    <label for="sabor">Seleccione un sabor: </label>
+                                    <select class="form-control" name="pastel" id="pastel" required>
+                                        <option value="">Seleccione un pastel</option>
+                                        <option value="vainilla">Vainilla</option>
+                                        <option value="chocolate">Chocolate </option>
+                                        <option value="Tres leches">Cajeta</option>
+                                        <option value="Cajeta">Tres leches</option>
+                                    </select><br>
+                                    <label for="segundo">Desea añadir otro sabor?</label>
+                                    <select class="form-control" name="segundo sabor" id="segundo">
+                                        <option value="">No</option>
+                                        <option value="vainilla">Vainilla</option>
+                                        <option value="chocolate">Chocolate</option>
+                                        <option value="Tres leches">Cajeta</option>
+                                        <option value="Cajeta">Tres leches</option>
+                                    </select><br>
+                                    <label for="adorno">Seleccione su adorno preferido</label>
+                                    <select class="form-control" name="adorno" id="adorno" required>
+                                        <option value="">Seleccione un adorno</option>
+                                        <option value="Barras de chocolate">Barras de chocolate</option>
+                                        <option value="Lunetas">Lunetas</option>
+                                        <option value="Fresas">Fresas</option>
+                                        <option value="Cerezas">Cereza</option>
+                                    </select><br>
+                                    <label for="segundo adorno">Desea añadir otro adorno?</label>
+                                    <select class="form-control" name="segundo adorno" id="segundo adorno">
+                                        <option value="">No</option>
+                                        <option value="Barras de chocolate">Barras de chocolate</option>
+                                        <option value="Lunetas">Lunetas</option>
+                                        <option value="Fresas">Fresas</option>
+                                        <option value="Cerezas">Cereza</option>
+                                    </select><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comentarios">Descripcion general del pastel:</label><br>
+                                    <textarea class="form-control" name="comentarios" id="comentarios" placeholder="Te escuchamos"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script src="assets/js/jquery.min.js"></script>
+            </section>
+            <div style="text-align: center;"><img src="images/pastel.jpg" alt="menu" width="905px" height="563px" ><img src="images/pastel2.jpg" alt="menu" width="1000px" height="563px" ></div>
+            <section1>
+                <!--Menu de pasteles y precios-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Menu</h2>
+                            <p>Te presentamos nuestro menu...</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Pasteles-->
+                <section>
+                    <h3>Pasteles.</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pastel de chocolate</h5>
+                                                <p class="card-text">Pastel de chocolate con crema de leche, vainilla y chispas chocolate.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pastel de cajeta</h5>
+                                                <p class="card-text">Pastel de cajeta con crema de leche y dulce de leche.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pastel de tres leches</h5>
+                                                <p class="card-text">Pastel de tres leches con crema de leche y pan de vainilla.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pastel de vainilla</h5>
+                                                <p class="card-text">Pastel de vainilla con leche.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section1>
+                <!--adornos-->
+                <section>
+                    <br>
+                    <h3>Adornos.</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Barras de chocolate</h5>
+                                                <p class="card-text">Barras de chocolate 100% mexicano.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Lunetas</h5>
+                                                <p class="card-text">Lunetas divertidas con diferentes colores.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Fresas</h5>
+                                                <p class="card-text">Fresas de nuestra propia cosecha.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Cerezas</h5>
+                                                <p class="card-text">Cerezas frescas y dulces.</p>
+                                                <p class="card-text">Precio: $10.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section><br>
+            <footer><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Copyright &copy; 2019 - Todos los derechos reservados</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </body>
+</html>
